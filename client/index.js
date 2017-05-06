@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
+import ListContainer from './containers/ListContainer';
 
 const Main = () => (
   <div>
-    <App />
+    <ListContainer />
   </div>
   );
 
