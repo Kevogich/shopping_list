@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AddItem = (props) => {
-  const { addItem } = props;
+  const { addItem, handleChange } = props;
   return (
     <div>
       <div>
@@ -11,13 +11,15 @@ const AddItem = (props) => {
         <hr />
       </div>
       <div>
-        <form className="input-group col-lg-6 offset-lg-3" onSubmit={addItem}>
+        <form className="input-group col-lg-6 offset-lg-3">
           <input
             className="form-control"
             placeholder="Enter list item "
+            onChange={handleChange}
           />
-          <button type="submit">Add Item</button>
+          <button onClick={addItem}>Add Item</button>
         </form>
+        <hr />
       </div>
     </div>
   );
@@ -25,6 +27,7 @@ const AddItem = (props) => {
 
 AddItem.propTypes = {
   addItem: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default AddItem;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AddItemContainer from './AddItemContainer';
+import ListContainer from './ListContainer';
 
 class Main extends Component {
 
@@ -8,7 +8,7 @@ class Main extends Component {
   render() {
     return (
       <div className="container text-lg-center">
-        <AddItemContainer />
+        <ListContainer />
       </div>
     );
   }
